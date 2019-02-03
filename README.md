@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/uilianries/conan-protobuf-example.svg?branch=master)](https://travis-ci.org/uilianries/conan-protobuf-example)
+[![Build Status](https://travis-ci.com/uilianries/conan-protobuf-example.svg?branch=master)](https://travis-ci.com/uilianries/conan-protobuf-example)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
 # Conan Protobuf Example
