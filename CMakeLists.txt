@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.1.2)
+project(sensor CXX)
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+
+find_package(Protobuf REQUIRED)
+
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS sensor.proto)
+add_executable(${PROJECT_NAME} main.cc ${PROTO_SRCS} ${PROTO_HDRS})
+target_link_libraries(${PROJECT_NAME} PUBLIC CONAN_PKG::protobuf)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR})
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
