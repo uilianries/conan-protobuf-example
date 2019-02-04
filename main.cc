@@ -9,7 +9,7 @@ int main() {
     sensor.set_humidity(68);
     sensor.set_door(Sensor_SwitchLevel_OPEN);
 
-    std::cout << "Serialize " << sensor.get_name() << " to sensor.data\n";
+    std::cout << "Serialize " << sensor.name() << " to sensor.data\n";
     std::ofstream ofs("sensor.data");
     sensor.SerializeToOstream(&ofs);
 
