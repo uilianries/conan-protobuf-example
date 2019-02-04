@@ -33,3 +33,4 @@
 
 # Cache folder
 build/
+venv
